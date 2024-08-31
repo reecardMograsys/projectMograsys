@@ -1,0 +1,1179 @@
+
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+
+
+<div class="grid simple" id="font">
+  <div class="grid-body no-border" style="padding: 0px;background-color: transparent;">
+   
+  
+
+    <div class=" cards" ng-hide="one">
+      <div ng-repeat="section in temp0">
+        <div class="col-md-2" style="margin-top: 10px;display: flex; justify-content:center; align-items: center;" ng-repeat="sectionData in section | filter:{sims_section_name:''}" >
+  
+          <div class="card" value="class[index]" ng-click="getStudentList(sims_Cur,sims_academic_year,sectionData.sims_grade_code,sectionData.sims_section_code);getclassimg(sectionData.sims_skin_filepath,sectionData.sims_section_name)" ng-model="edt.sims_section_name " style="width: 233px; height: 233px; background-color: #ffffff; border-radius: 10px;">
+           
+            <div class="row justify-content-center align-items-center" style="height: 100%;">
+             
+              <div class="col-12 text-center">
+                
+          
+                <img alt="class Image" id="{{sectionData.sims_skin_filepath}}" ng-src="{{imageUrl1+sectionData.sims_skin_filepath}}"
+                                                      class="imgview" 
+                                                      ng-model="image.sims_skin_filepath"
+                                                      style="border-radius: 80px ;    margin-top: 49px; width:100px !important; height:100px !important;object-fit: cover;" />
+          
+                <div>{{ sectionData.sims_section_name }}
+                  
+                </div>
+              </div>
+              <div class="deco1" style="position: absolute;
+              top: 0px;
+              left: 100%;
+              transform: translate(-137%, 12px);">
+                <div class="deco2" style="background-color: rgb(183 187 183) !important  ;display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" > <i id="gear" class="fi fi-rr-sticker"></i></div>
+            </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    
+   <br>
+    
+      <div class="col-md-12" ng-hide="twoN">
+        <button id="bt" type="button" class="btn btn-primary btn-small pull-right" style="margin-right: 4px; margin-top: -18px; ;"
+        ng-click="closN()">
+        {{"Close"|translate}}
+      </button>
+    <ul class="nav quick-section tip pull-right " data-placement="bottom"  title="Settting" style="position: relative;
+    display: block;
+     padding: 0px 0px; ">
+      <li class="quicklinks ">
+          <a data-toggle="dropdown" class=" pull-right " href="" id="A3" style="margin-top: -16.5px;     background-color:  #e5e9ec;
+        border-color:  #e5e9ec;margin-right: 14px; padding:0px 0px 0px 0px;">
+            <i class="fi fi-rr-circle-ellipsis" style="font-size: 25px; margin-top: -25px; "></i>
+    
+          </a>
+          <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
+              <li>
+                  <a href="" ng-show="lagnn"  ng-click="toggleFunction()">{{"Show View"|translate}}</a>
+    
+              </li>
+              <li>
+                  <a href="" ng-click="shownegetivepoints()" ng-show="lagnn" >{{"Show points"|translate}}</a>
+    
+              </li>
+    
+              <li>
+                <a href="" ng-show="lagnn" value="add skin" ng-click="toggleIcon() ">{{"Add skin"|translate}}</a>
+    
+            </li>
+          </ul>
+      </li>
+    </ul>
+        <br>
+            <div class="col-md-1"style="padding: 1.1em 1.8em;width: 11% !important;margin-top: 23px;"  ng-click="getStudentListnew(sims_Cur,sims_academic_year,sims_grade_code_1,sims_section_code_1)"
+    
+            ng-repeat="info in TotalcountN.table"
+            >
+
+        
+        <div class="img-box" style="margin-left: -11px;color: black;font-size: 15px;font-weight: 600;text-align: center;">{{class_name_view}}
+     
+<img alt="student Image" id="{{class_img_view}}"ng-src="https://assets.mograsys.com/Images/mojo/skills/abc (1).png" 
+                                            class="imgview" 
+                                         
+                                            style="border-radius: 80px ;width:85px !important; height:90px !important; object-fit: cover;
+                                            transition: none;
+                                            margin-left: 25px;
+                                            animation: none;
+                                            display: block;" />
+        </div>
+        
+     
+        <div class="deco1" style="transform: translate(-98%, 99px); position: absolute;
+        top: -20px;
+        left: 102%; " >
+          <div class="deco2" style="display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          border-radius: 9999px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          font-weight: 600;
+          max-width: fit-content;
+          max-height: fit-content;
+          box-sizing: unset;
+          border-width: 3px;
+          min-width: 16px;
+          min-height: 16px;
+          background-color: rgb(40, 161, 0);
+          font-size: 16px;
+          line-height: 16px;
+          padding: 6px;" ng-repeat=" t in classtypecount" ng-if="t.sims_mojo_type_code == 'P' && t.type_count !== '0'">{{t.type_count}}</div>
+      </div>
+      <div class="deco1"style="transform: translate(-118%, 132px); position: absolute;
+      top: 0px;
+      left: 100%;
+      "ng-hide="negetive_score" >
+        <div class="deco6" ng-repeat="t in classtypecount" ng-if="t.sims_mojo_type_code == 'N' && t.type_count !== '0'" style="margin-left: -39px;  display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        border-radius: 9999px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-weight: 600;
+        max-width: fit-content;
+        max-height: fit-content;
+        box-sizing: unset;
+        border-width: 3px;
+        min-width: 16px;
+        min-height: 16px;
+        background-color: rgb(251, 0, 0);
+        font-size: 16px;
+        line-height: 16px;
+        padding: 3px;
+    ">{{t.type_count}}</div>
+
+
+    </div>
+
+        <div style="padding:0.6em 1.4em; background-color: whitesmoke; border-radius: 9px;height: 80px;margin-top: -4rem;width: 115px;
+    text-align: center;">
+          <div style="color: #3c3939;
+          font-weight: bold;margin-top: 4rem;">
+            {{"All class:"|translate}} {{info.total_student}}
+          </div>
+        </div>
+         
+        </div>
+
+
+
+        <div class="col-md-1" ng-repeat="info in StudentList" style="padding: 1.6em 1.6em; width: 11% !important; margin-top: 26px;">
+          <div style="display: flex; justify-content: center;">
+            <button type="button" class="boxes" style="border: none; background-color: transparent; border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+           " 
+            data-toggle="modal"
+              data-target="#modal{{info.enroll_no}}">
+              <div>
+
+
+        
+                <div class="img-box name1 name2" ng-show="studimg">
+                 
+             
+<img alt="student Image" id="{{data.sims_student_img}}"ng-src="{{imageUrl +info.sims_student_img}}"
+                                                    class="imgview" 
+                                                    onerror="this.src = 'https://assets.mograsys.com/Content/smsm/Images/StudentImages/default.jpg'"
+                                                    ng-click ="getskillstudent(info.enroll_no,info.sims_student_img,info.student_name,info.sims_grade_code,info.sims_section_code,info.sims_cur_code,info.sims_academic_year)"
+                                                    style="border-radius: 13px ;width:100px !important; height:94px !important; object-fit: cover;" />
+                </div>
+             
+
+
+
+             
+                <div class="img-box name1"ng-show="studavatar" ng-repeat="skin in studentskintest1" ng-if ="skin.sims_enroll_number === info.enroll_no" >
+                 
+             
+                  <img alt="student Image" id="{{skin.sims_skin_filepath}}"ng-src="{{imageUrl1 + skin.sims_skin_filepath}}" 
+                                                                      class="imgview" 
+                                                                      ng-click ="getskillstudent(info.enroll_no,info.sims_student_img,info.student_name,info.sims_grade_code,info.sims_section_code,info.sims_cur_code,info.sims_academic_year)"
+                                                                      style="border-radius: 13px ;width:100px !important; height:90px !important; object-fit: cover;" />
+                     </div>
+
+
+                <div class="deco1" style="transform: translate(-118%, 75px); position: absolute;
+                top: 0px;
+                left: 100%;" >
+                    <div class="deco2" style="display: flex;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    border-color: rgb(255, 255, 255);
+                    border-style: solid;
+                    border-radius: 9999px;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    font-weight: 600;
+                    max-width: fit-content;
+                    max-height: fit-content;
+                    box-sizing: unset;
+                    border-width: 3px;
+                    min-width: 16px;
+                    min-height: 16px;
+                    background-color: rgb(40, 161, 0);
+                    font-size: 16px;
+                    line-height: 16px;
+                    padding: 6px;" ng-repeat=" t in Total_count" ng-if="info.enroll_no === t.sims_mojo_enroll_number&& t.entry_count !== '0'">{{t.entry_count}}</div>
+                </div>
+                <div class="deco1"style="transform: translate(-118%, 105px); position: absolute;
+                top: 0px;
+                left: 100%;
+                "ng-hide="negetive_score" >
+                  <div class="deco6" style=" display: flex;
+                  -webkit-box-pack: center;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  border-color: rgb(255, 255, 255);
+                  border-style: solid;
+                  border-radius: 9999px;
+                  color: rgb(255, 255, 255);
+                  text-align: center;
+                  font-weight: 600;
+                  max-width: fit-content;
+                  max-height: fit-content;
+                  box-sizing: unset;
+                  border-width: 3px;
+                  min-width: 16px;
+                  min-height: 16px;
+                  background-color: rgb(251, 0, 0);
+                  font-size: 16px;
+                  line-height: 16px;
+                  padding: 6px;
+              " ng-repeat="t in Total_count" ng-if="info.enroll_no === t.sims_mojo_enroll_number && t.entry_count2 !== '0'">{{t.entry_count2}}</div>
+
+
+              </div>
+              <div class="deco1" style="    transform: translate(-479%, 6px) !important; position: absolute;
+              top: 0px;
+              left: 100%;">
+                <div class="deco2" style="display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                margin-left: -5px;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: grey;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" ng-click="getskinnew(info.enroll_no,info.sims_student_img,info.student_name,info.sims_grade_code,info.sims_section_code,info.sims_cur_code,info.sims_academic_year)" style="background-color: rgb(183 187 183) !important;margin-left: -7px;" ng-show="isIconShown" > <i class="fi fi-rr-sticker"></i></div>
+            </div>
+
+                <div style="padding:0.6em 1.4em; background-color: whitesmoke; border-radius: 9px ; height: 80px;width: 118px;margin-top: -5rem;">
+                  <div style="color: #3c3939;margin-top: 4rem;
+                  font-weight: bold;" title="{{info.student_name}}"class="one-long-line" style="max-width:250px;
+   white-space:nowrap; 
+   overflow:hidden;
+   text-overflow:ellipsis;">
+                    {{info.student_name}}
+                  </div>
+                </div>
+              </div>
+            </button>
+
+         
+
+
+          </div>
+        </div>
+      </div>
+   
+
+
+    <div class="modal fade " id="myModal4" tabindex="-1">
+      <div class="modal-dialog rod4">
+        <div class="modal-content"style="    width: 150%;
+        height: 600px;
+        margin-left: -16%;
+        background: #e9e8e800;">
+          <div class="modal-header"style="background: #e9e8e800;border-bottom: 0px solid #e5e5e5 !important;" >
+            <h4 class="semi-bold pull-left">
+             
+          
+            </h4>
+         
+          
+          </div>
+          <div class="col-md-12 devon"    style="background-color: white;  position: relative;
+          inset: 50% 0px auto;
+          transform: translate(0px, -50%);
+          margin: 0px auto;
+          padding: 0px;
+          background: rgb(255, 255, 255);
+          box-shadow: rgba(45, 64, 150, 0.06) 0px 6px 0px;
+          border-radius: 18px;
+          border: 2px solid rgb(211, 215, 236);
+          max-height: 90%;
+          overflow: hidden;
+          display: flex;
+          width: 1020px;
+          height:1020px;">
+           
+            <div class="col-md-4 "style="text-align: center;
+            background: white;
+            margin-top: 3px;">
+                <div class="col-md-12" style="    width: 100%;
+                height: 485px;
+                border: 1px solid #d6d6d6;
+                margin-top: 35px;
+                border-radius: 10px;"
+                >
+                    
+                <img   ng-show="studimg" alt="student Image" id="{{sims_student_img}}"ng-src="{{imageUrl +sims_student_img}}"
+                class="imgview" 
+             
+                style="border-radius: 80px ;width:50% !important; height:50% !important;margin-top: 85px;background-color: #aeb0aa;
+                object-fit: cover;" />
+                   <img  ng-show="studavatar" alt="student Image" id="{{sims_student_img}}"ng-src="{{imageUrl +sims_student_img}}"
+                   class="imgview" 
+                
+                   style="border-radius: 80px ;width:50% !important; height:50% !important;margin-top: 85px;background-color: #aeb0aa;
+                   object-fit: cover;" />
+
+
+               <div style="color:black"> <b style="font-size: 20px;">
+                   {{sims_student_full_name}}</b></div>
+                    </div>
+          </div>
+          
+          <div class="col-md-8 " >
+            <label style="font-size: large;font-weight: 600;margin-top: 2px;"> Give feedback to {{sims_student_full_name}}</label>
+            <button class="btn btn-primary btn-cons" ng-click="showpostiveskill()" style="margin-top: 21px;background-color: #3ae39f;">{{"Positive"|translate}}  </button>
+            <button class="btn btn-success btn-cons" ng-click="shownegetiveskill()" style="background-color: #8b7afc;margin-top: 21px;">{{"Needs Work"|translate}}</button>
+            <button
+         
+            class="rod5 pull-right"
+            ng-click="closemodal()"
+            data-dismiss="modal"
+            type="submit"
+            style="margin-top: -15px;
+            margin-right: 1px;
+            height: 28px;
+            border:none;
+            background-color:white;
+            color: black;
+            font-weight: bold;"
+          >
+          <i class="fi fi-rr-circle-x" style="font-size: 20px;"></i>
+          </button> 
+            <div class="col-md-12" ng-show ="skillpositive" style="background-color: white;
+            overflow-y: scroll;
+            height: 442px;
+            border: 1px solid #dcd8d8;
+            padding-left: 27px;
+            padding-top: 16px;
+            margin-top: 9px;
+            border-radius: 10px;
+            ">
+          <button class="col-md-2 divdeco2" style="margin-top: 30px !important;  padding:0.6em 1.4em; background-color: #e0fffd; border-radius: 16px;height: 107px;width: 115px;
+            text-align: center;  
+margin: 10px;
+
+
+    border:2px solid #3ae39f;" ng-repeat=" p in records" ng-if="p.sims_skill_typecode == 'P'"id="myBtn2"
+           >
+           
+            <div class="icons">
+               
+              <img alt="student Image" id="{{p.sims_skill_skin_code}}"ng-src="{{imageUrl1 +p.sims_skill_skin_code}}"
+              class="imgview" 
+           
+              style="border-radius: 80px ;width:90% !important; height:53% !important;object-fit: cover; margin-top: -5.5rem;" />
+                 
+                  
+
+            </div>
+            <div class="deco3" style="position: absolute;
+            top: 0px;
+            left: 100%;
+            transform: translate(-364%, -20px);">
+                <div class="deco2"  style="display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" ng-repeat=" s in skillcount" ng-if="s.sims_mojo_skill_code === p.sims_skill_code" style="background-color: #6ed3b2 !important;margin-top: -3rem;">{{s.entry_count}} </div>
+            </div>
+            <div class="deco1"style="transform: translate(-58%, 65px); position: absolute;
+            top: 0px;
+            left: 100%;
+            " >
+              <div class="deco2" style="background-color:#6ed3b2 !important; display: flex;
+              -webkit-box-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              align-items: center;
+              border-color: rgb(255, 255, 255);
+              border-style: solid;
+              border-radius: 9999px;
+              color: rgb(255, 255, 255);
+              text-align: center;
+              font-weight: 600;
+              max-width: fit-content;
+              max-height: fit-content;
+              box-sizing: unset;
+              border-width: 3px;
+              margin-top:18px;
+              min-width: 16px;
+              min-height: 16px;
+              background-color: grey;
+              font-size: 16px;
+              line-height: 16px;
+              padding: 6px;"   data-dismiss="modal"ng-click="markpoints(enroll_number,sims_student_full_name,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,sims_grade_code,sims_section_code,sims_cur_code,sims_academic_year,p.sims_skill_typecode,sims_student_img)
+              ;getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)"> 
+                <i class="fa fa-plus"></i></div>
+             </div>
+              <div class="deco1" style="transform: translate(-151%, 65px); position: absolute;
+              top: 0px;
+              left: 100%;
+              ">
+                <div class="deco2" style="background-color: #8b7afc !important; display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                margin-top:18px;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" data-dismiss="modal"  
+                ng-click="removepoints(enroll_number,sims_student_full_name,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,sims_grade_code,sims_section_code,sims_cur_code,sims_academic_year,p.sims_skill_typecode,sims_student_img);getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)""> <i class="fa fa-minus"></i></div>
+            </div>
+        
+        
+
+                <div class="one-long-line" title="{{p.sims_skill_name}} " style="color: black; max-width:250px;
+                white-space:nowrap; 
+                overflow:hidden;
+                text-overflow:ellipsis;" >{{p.sims_skill_name}} </div>
+                <span style="color:rgb(2, 188, 2) ;font-weight: bold;font-size: 15px ;color: black;">+{{p.sims_skill_point}} </span>
+       </button>
+        </div>
+        
+    <div class="col-md-12" ng-show ="skillnegetive" style="background-color: white;
+            overflow-y: scroll;
+            height: 442px;
+            border: 1px solid #dcd8d8;
+            padding-left: 27px;
+            padding-top: 16px;
+            margin-top: 9px;
+            border-radius: 10px;
+            ">
+
+            <div class="col-md-2 divdeco" style="margin-top: 30px !important;  padding:0.6em 1.4em; background-color: #e5deff; border-radius: 16px;height: 107px;width: 115px;
+            text-align: center;  
+margin: 10px;
+border: 2px solid rgb(147,75,224)
+
+    ;" ng-repeat=" p in records" ng-if="p.sims_skill_typecode == 'N'" id="myBtn3"
+           >
+            <div class="icons">
+               
+              <img alt="student Image"  id="{{p.sims_skill_skin_code}}"ng-src="{{imageUrl1 +p.sims_skill_skin_code}}"
+              class="imgview" 
+           
+              style="border-radius: 80px ;width:90% !important; height:53% !important;object-fit: cover;margin-top: -3.2rem;" />
+                 
+
+
+            </div>
+            <div class="deco3" style="position: absolute;
+            top: 0px;
+            left: 105%;
+            transform: translate(-364%, -20px);" >
+                <div class="deco6" ng-repeat=" s in skillcount" ng-if="s.sims_mojo_skill_code === p.sims_skill_code" style="margin-top: -0.1rem; display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(251, 0, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;
+            ">{{s.entry_count}}</div>
+            </div>
+            
+            <div class="deco1"style="transform: translate(-58%, 65px); position: absolute;
+            top: 0px;
+            left: 100%;
+            " >
+            <div class="deco2" style="background-color:#6ed3b2 !important; display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-radius: 9999px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: 600;
+            max-width: fit-content;
+            max-height: fit-content;
+            box-sizing: unset;
+            border-width: 3px;
+            min-width: 16px;
+            margin-top:18px;
+            min-height: 16px;
+            background-color: rgb(40, 161, 0);
+            font-size: 16px;
+            line-height: 16px;
+            padding: 6px;"   data-dismiss="modal"ng-click="markpoints(enroll_number,sims_student_full_name,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,sims_grade_code,sims_section_code,sims_cur_code,sims_academic_year,p.sims_skill_typecode,sims_student_img);getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)""> <i class="fa fa-plus"></i></div>
+            </div>
+
+              <div class="deco1" style="transform: translate(-151%, 65px); position: absolute;
+              top: 0px;
+              left: 100%;
+              ">
+                <div class="deco2" style="background-color: #8b7afc !important;display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                margin-top:18px;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" data-dismiss="modal"  ng-click="removepoints(enroll_number,sims_student_full_name,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,sims_grade_code,sims_section_code,sims_cur_code,sims_academic_year,p.sims_skill_typecode,sims_student_img);getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)""> <i class="fa fa-minus"></i></div>
+            </div>
+           
+
+            <div class="one-long-line" title="{{p.sims_skill_name}} " style="color: black; max-width:250px;
+            white-space:nowrap; 
+            overflow:hidden;
+            text-overflow:ellipsis;" >{{p.sims_skill_name}} </div>
+                <span style="color:rgb(248, 12, 12) ;font-weight: bold;font-size: 15px;color: black;">{{p.sims_skill_point}} </span>
+          </div>
+        </div>
+        </div>
+        
+        
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <div class="modal fade " id="myModal6" tabindex="-1">
+      <div class="modal-dialog rod4">
+        <div class="modal-content"style="    width: 150%;
+        height: 600px;
+        margin-left: -16%;
+        background: white;">
+         <button
+         
+         class="rod5 pull-right"
+         ng-click="close2()"
+         data-dismiss="modal"
+         type="submit"
+         style="margin-top: 1px;
+         margin-right: 1px;
+         height: 28px;
+         border:none;
+         background-color:white;
+         color: black;
+         font-weight: bold;"
+       >
+       <i class="fi fi-rr-circle-x" style="font-size: 20px;"></i>
+       </button> 
+          <div class="modal-header"style="background: white;border-bottom: 0px solid #e5e5e5 !important;" >
+            <h4 class="semi-bold pull-left">
+             
+          
+            </h4>
+         
+          
+          </div>
+          <div class="col-md-12 "    style="background-color: white;">
+            <div class="col-md-2 pull-left">
+              <label id="lbl_vehicle_own" for="txt_vehicle_own" class="form-label">{{"Skin Type"| translate }} <span style="color:red; font-size:18px">*</span></label>
+           
+            </div>
+            <div class="col-md-4 pull-left">
+              
+              <select id="cmb_vehicle_own" class="form-control"
+              
+                  ng-model="sims_skill_typecode"
+                  ng-change="getskinimage(sims_skill_typecode)"
+                  ng-blur="getskinimage(sims_skill_typecode)"
+                  ng-options="own.sims_skill_typecode as own.sims_skill_typecode_name for own in studentskin" >
+                  <option value="">{{"Please Select" | translate }}</option>
+              </select>
+          </div>
+          </div>
+          <div class="col-md-12" style="background-color: white;" >
+
+         <div class="col-md-2" ng-repeat="img in getskin" >
+            <img alt="student Image" id="{{img.sims_skin_filepath}}"ng-src="{{imageUrl1 + img.sims_skin_filepath}}"
+            class="imgview" 
+         ng-click ="assignimage(img.sims_skin_filepath,img.sims_skin_code,img.sims_skin_name,sims_enroll_no,sims_grade_code,sims_section_code,sims_academic_year)"
+         data-dismiss="modal" style="border-radius: 80px ;width: 120px;
+         height: 120px;
+            object-fit: cover;" />
+  
+            </div>
+         
+           
+           
+          
+        
+   
+        </div>
+        
+        </div>
+        </div>
+        </div>
+        
+        
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="modal fade " id="myModal5" tabindex="-1">
+      <div class="modal-dialog rod4">
+        <div class="modal-content"style="    width: 150%;
+        height: 600px;
+        margin-left: -16%;
+        background: #e9e8e800;">
+          <div class="modal-header"style="background: #e9e8e800;border-bottom: 0px solid #e5e5e5 !important;" >
+            <h4 class="semi-bold pull-left">
+             
+          
+            </h4>
+         
+          
+          </div>
+          <div class="col-md-12 devon"    style="background-color: white;  position: relative;
+          inset: 50% 0px auto;
+          transform: translate(0px, -50%);
+          margin: 0px auto;
+          padding: 0px;
+          background: rgb(255, 255, 255);
+          box-shadow: rgba(45, 64, 150, 0.06) 0px 6px 0px;
+          border-radius: 18px;
+          border: 2px solid rgb(211, 215, 236);
+          max-height: 90%;
+          overflow: hidden;
+          display: flex;
+          width: 1020px;
+          height:1020px;">
+           
+            <div class="col-md-4 "style="text-align: center;
+            background: white;
+            margin-top: 3px;">
+                <div class="col-md-12" style="    width: 100%;
+                height: 472px;
+                border: 1px solid #d6d6d6;
+                margin-top: 29px;
+                border-radius: 10px;"
+                >
+                    
+                <img alt="student Image" id="{{sims_student_img}}"ng-src="https://assets.mograsys.com/Images/mojo/skills/abc (1).png"
+                class="imgview" 
+             
+                style="border-radius: 80px ;width:50% !important; height:50% !important;margin-top: 85px;background-color: #aeb0aa;
+                object-fit: cover;" />
+
+               <div style="color:black"> <b>
+                  {{"Whole class"|translate}}</b></div>
+                    </div>
+          </div>
+          <div class="col-md-8 " >
+            
+            <button class="btn btn-primary btn-cons" style="margin-top: 30px;background-color: #3ae39f;" ng-click="showpostiveskill()">{{"Positive"|translate}}</button>
+            <button class="btn btn-success btn-cons" style="margin-top: 30px;background-color: #8b7afc" ng-click="shownegetiveskill()">{{"Needs Work"|translate}}</button>
+            <button
+         
+            class="rod5 pull-right"
+            ng-click="closemodal()"
+            data-dismiss="modal"
+            type="submit"
+            style="margin-top: 0px;
+            margin-right: 1px;
+            height: 28px;
+            border:none;
+            background-color:white;
+            color: black;
+            font-weight: bold;"
+          >
+          <i class="fi fi-rr-circle-x" style="font-size: 20px;"></i>
+          </button> 
+            <div class="col-md-12" ng-show ="skillpositive" style="background-color: white;
+            overflow-y: scroll;
+            height: 436px;
+            border: 1px solid #dcd8d8;
+            padding-left: 27px;
+            padding-top: 16px;
+            border-radius: 10px;
+            margin-top: 9px;
+            ">
+            <button class="col-md-2 divdeco2" style="margin-top: 30px !important; padding:0.6em 1.4em; margin-right: 5px; border-radius: 9px;height: 80px;margin-top: -4rem;width: 115px;
+            text-align: center; width: 10rem;
+    height: 11rem;
+    background-color: #e0fffd;
+    border: 2px solid #3ae39f;
+    border-radius: 18px;
+    padding: 18px 12px;
+    text-align: center;
+    margin-right: 25px;
+    margin-bottom: 13px;" ng-repeat=" p in records" ng-if="p.sims_skill_typecode == 'P'" id="myBtn2"
+           
+            >
+            <div class="icons">
+               
+              <img alt="student Image" id="{{p.sims_skill_skin_code}}"ng-src="{{imageUrl1 +p.sims_skill_skin_code}}"
+              class="imgview" 
+           
+              style="border-radius: 80px ;width:90% !important; height:53% !important;object-fit: cover;margin-top: -55px;" />
+                 
+                  
+
+            </div>
+            <div class="deco3"style="transform: translate(-304%, -20px); position: absolute;
+            top: 0px;
+            left: 110%;
+           " >
+                <div class="deco2" style="display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" ng-repeat=" s in classskillcount" ng-if="s.sims_mojo_skill_code === p.sims_skill_code" style="margin-top: -3rem;margin-left: 0.5rem;background-color: #6ed3b2;">{{s.skill_count}}</div>
+            </div>
+            <div class="deco1"style="transform: translate(-58%, 65px); position: absolute;
+            top: 0px;
+            left: 100%;
+          " >
+              <div class="deco2" style="background-color:#6ed3b2 !important; display: flex;
+              -webkit-box-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              align-items: center;
+              border-color: rgb(255, 255, 255);
+              border-style: solid;
+              margin-top:18px;
+              border-radius: 9999px;
+              color: rgb(255, 255, 255);
+              text-align: center;
+              font-weight: 600;
+              max-width: fit-content;
+              max-height: fit-content;
+              box-sizing: unset;
+              border-width: 3px;
+              min-width: 16px;
+              margin-top:18px;
+              min-height: 16px;
+              background-color: rgb(40, 161, 0);
+              font-size: 16px;
+              line-height: 16px;
+              padding: 6px;"   data-dismiss="modal" ng-click="markpointsfullclass(cur_code_new,acad_year_new,grade_new,section_new,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,p.sims_skill_typecode)"> <i class="fa fa-plus"></i></div>
+             </div>
+              <div class="deco1" style="transform: translate(-151%, 65px); position: absolute;
+              top: 0px;
+              left: 100%;
+            ">
+                <div class="deco2" style="background-color: #8b7afc !important;display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                margin-top:18px;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 9999px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-weight: 600;
+                margin-top:18px;
+                max-width: fit-content;
+                max-height: fit-content;
+                box-sizing: unset;
+                border-width: 3px;
+                min-width: 16px;
+                min-height: 16px;
+                background-color: rgb(40, 161, 0);
+                font-size: 16px;
+                line-height: 16px;
+                padding: 6px;" data-dismiss="modal"  ng-click="removepointsfullclass(cur_code_new,acad_year_new,grade_new,section_new,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,p.sims_skill_typecode)"> <i class="fa fa-minus"></i></div>
+            </div>
+
+              <div class="one-long-line" style="max-width:250px;
+              white-space:nowrap; 
+              overflow:hidden;
+              text-overflow:ellipsis;" title="{{p.sims_skill_name}}">  {{p.sims_skill_name}} </div>
+                <span style="color:black ;font-size: 15px;font-weight: bold;">+{{p.sims_skill_point}} </span>
+                </button>
+          </div>
+        
+        
+        <div class="col-md-12" ng-show ="skillnegetive" style="background-color: white;
+        overflow-y: scroll;
+        height: 434px;
+        border: 1px solid #dcd8d8;
+        padding-left: 27px;
+        padding-top: 16px;
+        margin-top: 8.2px;
+        border-radius: 10px;
+        ">
+        <button class="col-md-2 divdeco" style="margin-top: 3.2rem !important; padding:0.6em 1.4em; background-color: #b29dff57; border-radius: 16px;height: 11rem;margin-top: -4rem;width: 10rem;
+            text-align: center;background-color: #e5deff; margin-right: 25px;
+            margin:0 25px 13px 0;
+
+            border: 2px solid rgb(147,75,224);
+            " ng-repeat=" p in records" ng-if="p.sims_skill_typecode == 'N'" id="myBtn3"
+        >
+        <div class="icons">
+           
+          <img alt="student Image" id="{{p.sims_skill_skin_code}}"ng-src="{{imageUrl1 +p.sims_skill_skin_code}}"
+          class="imgview" 
+       
+          style="border-radius: 80px ;width:90% !important; height:53% !important;object-fit: cover;margin-top: -55px;" />
+             
+
+
+        </div>
+        <div class="deco3" style="transform: translate(-304%, -20px); position: absolute;
+        top: 0px;
+        left: 121%;
+        " >
+          <div class="deco6" style=" display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          border-radius: 9999px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          font-weight: 600;
+          max-width: fit-content;
+          max-height: fit-content;
+          box-sizing: unset;
+          border-width: 3px;
+          min-width: 16px;
+          min-height: 16px;
+          background-color: rgb(251, 0, 0);
+          font-size: 16px;
+          line-height: 16px;
+          padding: 6px;
+      " ng-repeat=" s in classskillcount" style="margin-top: -3rem;margin-left: 0.5rem;background-color:#8b7afc ;" ng-if="s.sims_mojo_skill_code === p.sims_skill_code">{{s.skill_count}}</div>
+        </div>
+        <div class="deco1"style="transform: translate(-58%, 65px); position: absolute;
+        top: 0px;
+        left: 100%;
+        " >
+          <div class="deco2" style="background-color:#6ed3b2 !important; display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          border-radius: 9999px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          font-weight: 600;
+          max-width: fit-content;
+          max-height: fit-content;
+          box-sizing: unset;
+          border-width: 3px;
+          margin-top:18px;
+          min-width: 16px;
+          min-height: 16px;
+          background-color: rgb(40, 161, 0);
+          font-size: 16px;
+          line-height: 16px;
+          padding: 6px;"   data-dismiss="modal"ng-click="markpointsfullclass(cur_code_new,acad_year_new,grade_new,section_new,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,p.sims_skill_typecode);getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)"> <i class="fa fa-plus"></i></div>
+         </div>
+          <div class="deco1" style="transform: translate(-151%, 65px); position: absolute;
+          top: 0px;
+          left: 100%;
+          ">
+            <div class="deco2" style="background-color: #8b7afc !important;display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-radius: 9999px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: 600;
+            max-width: fit-content;
+            max-height: fit-content;
+            box-sizing: unset;
+            border-width: 3px;
+            min-width: 16px;
+            margin-top:18px;
+            min-height: 16px;
+            background-color: rgb(40, 161, 0);
+            font-size: 16px;
+            line-height: 16px;
+            padding: 6px;" data-dismiss="modal"  ng-click="removepointsfullclass(cur_code_new,acad_year_new,grade_new,section_new,p.sims_skill_skin_code,p.sims_skill_name,p.sims_skill_code,p.sims_skill_point,p.sims_skill_typecode);getStudentList(sims_cur_code,sims_academic_year,sims_grade_code,sims_section_code)""> <i class="fa fa-minus"></i></div>
+        </div>
+
+        <div class="one-long-line"  style="max-width:250px;
+        white-space:nowrap; 
+        overflow:hidden;
+        text-overflow:ellipsis;" title="{{p.sims_skill_name}}">  {{p.sims_skill_name}} </div>
+            <span style="color:black ;font-size: 15px;font-weight: bold;">{{p.sims_skill_point}} </span>
+      
+    </div>
+        </div>
+        
+        
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    </div>
+   
+   
+            
+            <div class="col-md-12 " style="text-align: center;" id="myModal5" ng-hide="gradeadd">
+                <button  ng-click ="closemodal2(enroll_no)" data-dismiss="modal" style="background-color: #e5deff; border: 2px solid rgb(147,75,224);
+                width: 42%;
+                border-radius: 20px;
+                height: 92px;margin-top:-56%;
+                "
+                > 
+              
+                <img alt="student Image" id="{{file_path}}"ng-src="{{imageUrl1 + file_path}}"
+                class="imgview pull-right" 
+             
+                style="border-radius: 0px;
+                width: 15% !important;
+                height: 78% !important;object-fit: cover;" />
+                <img alt="student Image" id="{{img}}"ng-src="{{imageUrl + img}}"
+                class="imgview pull-left" 
+             
+                style="border-radius: 80px ;width:12% !important; height:74% !important;object-fit: cover;background-color: #e5deff; " />
+                
+                <div style="margin-top: 14px;
+                color: black;border-color: green;">
+                <span style="font-weight: bold;font-size: 17px;background-color: #e5deff;">{{sims_student_full_name_1}}</span>
+                <br>
+                <span style="font-weight: bold;">  Added skill point{{sims_skill_point_1}} for {{sims_skill_name_1}}</span>
+              </div>
+             
+            </button>
+           
+          
+  
+  
+            
+          </div>
+          <div class="col-md-12 " style="text-align: center;" id="myModal5" ng-hide="gradedelete">
+            <button  ng-click ="closemodal2(enroll_no)" data-dismiss="modal" style="background-color: #ffeaeb;
+            width: 42%;
+            border-radius: 20px;
+            height: 92px;margin-top:-56%;
+            border:2px solid red;"
+            
+            > 
+           
+            <img alt="student Image" id="{{file_path}}"ng-src="{{imageUrl1 + file_path}}"
+            class="imgview pull-right" 
+         
+            style="border-radius: 0px;
+            width: 15% !important;
+            height: 78% !important;object-fit: cover;" />
+            <img alt="student Image" id="{{img}}"ng-src="{{imageUrl + img}}"
+            class="imgview pull-left" 
+         
+            style="border-radius: 80px ;width:12% !important; height:74% !important;object-fit: cover;" />
+            
+            <div style="margin-top: 14px;
+            color: black;">
+            <span style="font-weight: bold;font-size: 17px;">{{sims_student_full_name_1}}</span>
+            <br>
+            <span style="font-weight: bold;"> Removed skill point  {{sims_skill_point_1}} for {{sims_skill_name_1}}</span>
+          </div>
+         
+        </button>
+       
+      
+
+
+        
+      </div>
+          <div class="col-md-12" style="text-align: center;" id="myModal5" ng-hide="totaladd">
+            <button  ng-click ="closemodal2(enroll_no)" data-dismiss="modal" style="background-color:#e5deff;
+            width: 42%;
+            border-radius: 20px;
+            border: 2px solid rgb(147,75,224);
+            height: 92px;margin-top:-56%;
+            
+            "
+           
+            > 
+          
+            <img alt="student Image" id="{{sims_skill_skin_code_1}}"ng-src="{{imageUrl1 + sims_skill_skin_code_1}}"
+            class="imgview pull-right" 
+         
+            style="border-radius: 0px;
+            width: 15% !important;
+            height: 78% !important;object-fit: cover;" />
+            
+            
+            <div style="margin-top: 14px;
+            color: black;">
+            <span style="font-weight: bold;font-size: 17px;">{{"All class"|translate}}</span>
+            <br>
+            <span style="font-weight: bold;">  {{sims_skill_point_1}} for {{sims_skill_name_1}}</span>
+          </div>
+         
+        </button>
+      </div>
+      <div class="col-md-12" style="text-align: center;" id="myModal5" ng-hide="removeall">
+        <button  ng-click ="closemodal2(enroll_no)" data-dismiss="modal" style="background-color: #ffeaeb;
+            width: 42%;
+        width: 42%;
+        border-radius: 20px;
+        border: 2px solid red;"
+        > 
+  
+        <img alt="student Image" id="{{sims_skill_skin_code_1}}"ng-src="{{imageUrl1 + sims_skill_skin_code_1}}"
+        class="imgview pull-right" 
+     
+        style="border-radius: 0px;
+        width: 15% !important;
+        height: 78% !important;object-fit: cover;" />
+      
+        
+        <div style="margin-top: 14px;
+        color: black;background-color: #3c3939;">
+        <span style="font-weight: bold;font-size: 17px;">All class</span>
+        <br>
+        <span style="font-weight: bold;">  {{"Removed skill points"|translate}} {{sims_skill_point_1}} {{"for"|translate}} {{sims_skill_name_1}}</span>
+      </div>
+     
+    </button>
+  </div>
+</div>
